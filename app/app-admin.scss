@@ -1,0 +1,78 @@
+/*
+  Simple grid
+*/
+@import "vars";
+
+[class*="flex-col-"] {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+}
+
+.flex {
+
+  &-grid {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    box-sizing: border-box;
+
+    &-center-cols {
+      justify-content: center;
+    }
+  }
+
+  &-col-align {
+    &-center {
+      margin-left: auto;
+      margin-right: auto;
+      align-self: center;
+    }
+    &-right {
+      margin-left: auto;
+      align-self: right;
+    }
+  }
+
+  @include media-sm-up {
+    @for $i from 1 through 12 {
+      &#{"-col-sm-" + $i} {
+        width: percentage(1 / 12 * $i);
+      }
+    }
+  }
+
+  @include media-md-up {
+    @for $i from 1 through 12 {
+      &#{"-col-md-" + $i} {
+        width: percentage(1 / 12 * $i);
+      }
+    }
+  }
+
+  @include media-lg-up {
+    @for $i from 1 through 12 {
+      &#{"-col-lg-" + $i} {
+        width: percentage(1 / 12 * $i);
+      }
+    }
+  }
+}
+
+/*
+  Simple grid END
+*/
+
+#update-nag,
+.update-nag {
+  display: none !important;
+}
+
+#wp-version-message {
+  > .button {
+    display: none !important;
+  }
+}

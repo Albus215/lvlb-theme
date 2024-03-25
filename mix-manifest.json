@@ -1,0 +1,8 @@
+{
+    "/static/theme.js": "/static/theme.js",
+    "/static/theme.admin.js": "/static/theme.admin.js",
+    "/static/theme.editor.css": "/static/theme.editor.css",
+    "/static/theme.auth.css": "/static/theme.auth.css",
+    "/static/theme.admin.css": "/static/theme.admin.css",
+    "/static/theme.css": "/static/theme.css"
+}

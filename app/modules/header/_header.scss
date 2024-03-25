@@ -1,0 +1,421 @@
+/**
+  Page header styles
+ */
+
+// -- Front Page Style
+.header-front {
+    padding-top: 130px;
+    background: $color-blue;
+    padding-bottom: 160px;
+    @include is-flex;
+    position: relative;
+    overflow: hidden;
+    @include media-lg-up {
+        min-height: calc(100vh - 100px);
+    }
+    &__wrap {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    &__content {}
+    &__images {}
+    &__img-1 {
+        width: 100%;
+        display: block;
+    }
+    &__img-2 {
+        display: block;
+        position: absolute;
+        width: 320px;
+        height: 320px;
+        bottom: 60px;
+        right: 0;
+        background-position: center;
+        background-size: cover;
+        &-frame {
+            display: block;
+            background: transparent url("img/frame_square_sm.png");
+            width: calc(100% - 30px);
+            height: calc(100% - 30px);
+            margin-top: 15px;
+            margin-left: 15px;
+            background-size: 100% 100%;
+        }
+    }
+    @include media-xl-up {
+        &__images {
+            position: relative;
+        }
+        &__img-2 {
+            right: -160px;
+            bottom: -160px;
+        }
+    }
+    @include media-lg-down {
+        padding-top: 110px;
+    }
+    @include media-md-down {
+        padding-bottom: 30px;
+        &__img-2 {
+            position: relative;
+            right: unset;
+            bottom: unset;
+            width: 100%;
+            height: auto;
+            padding-top: 100%;
+            &-frame {
+                position: absolute;
+                margin: 0;
+                top: 15px;
+                left: 15px;
+            }
+        }
+    }
+}
+
+// --
+// -- Header Half-Image
+.header-himg {
+    position: relative;
+    @include is-flex;
+    flex-flow: row wrap;
+    background: $color-blue;
+    overflow: hidden;
+    min-height: 680px;
+    padding-top: 160px;
+    padding-bottom: 60px;
+    &__wrap {
+        position: relative;
+        margin-top: auto;
+        margin-bottom: auto;
+        z-index: 10;
+    }
+    &__bg {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &__title {
+        @include is-flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        -webkit-box-align: center;
+        -webkit-flex-align: center;
+        margin: auto;
+        text-align: center;
+        color: $color-brown;
+        padding: 30px;
+        width: 520px;
+        height: 300px;
+        background: transparent url("img/frame_wide.png") no-repeat center center;
+        background-size: 100% 100%;
+        line-height: 1;
+        @include media-md-down {
+            width: 100%;
+            height: 280px;
+        }
+        @include media-sm-down {
+            width: 100%;
+            height: 200px;
+            font-size: 52px;
+        }
+    }
+    @include media-md-down {
+        min-height: 580px;
+        padding-top: 140px;
+        padding-bottom: 40px;
+    }
+    @include media-sm-down {
+        padding-top: 80px;
+        padding-bottom: 0;
+        min-height: auto;
+        &__bg {
+            position: relative;
+            width: 100%;
+            padding-top: 85%;
+        }
+        &__title {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+// --
+// -- Header Half-image with Content
+.header-himgc {
+    &__left {
+        padding-top: 120px;
+        background: $color-blue;
+        &.header_third {
+            margin-bottom: 35px;
+            .the-content {
+                max-width: 795px;
+                margin-left: auto;
+                margin-right: 55px;
+            }
+            &+.header-himgc__right .header-himgc__bg {
+                height: 540px;
+            }
+        }
+    }
+    &__right {
+        padding-top: 120px;
+        position: relative;
+        background: $color-blue;
+        &-imgs {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+        &-inner {
+            width: 330px;
+            height: 330px;
+            position: relative;
+            img {
+                width: 440px;
+                height: auto;
+                object-fit: cover;
+                margin: 0 auto;
+            }
+            &:first-of-type {
+                margin-top: 15px;
+            }
+            &:last-of-type {
+                width: 440px;
+                height: 440px;
+                top: 0em;
+                right: -45%;
+                bottom: -70px;
+                position: relative;
+                margin-bottom: -70px;
+            }
+        }
+        &-paroller {
+            background: url(img/frame_square_sm.png);
+            background-size: 100% 100%;
+            z-index: 2;
+            width: calc(100% - 40px);
+            height: calc(100% - 40px);
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-repeat: no-repeat;
+            background-position: 100% 100% !important;
+        }
+    }
+    &__bg {
+        display: block;
+        padding-top: 85%;
+        width: 100%;
+        background-color: $color-blue;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &__content-additional {}
+    &__links {
+        display: block;
+        width: 370px;
+        background-color: rgba($color-yellow, .25);
+        margin: 30px auto 0 33px;
+        padding: 40px 0;
+    }
+    &__link {
+        position: relative;
+        margin-left: -30px;
+        font-size: 50px;
+        display: block;
+        @include font-main;
+        color: $color-yellow;
+        letter-spacing: 13px;
+        text-transform: uppercase;
+        &:first-child {
+            padding-bottom: 40px;
+        }
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            transition: .5s;
+        }
+        &::after {
+            width: 170px;
+            height: 2px;
+            background: $color-yellow;
+            right: 42px;
+            top: 102px;
+        }
+        &::before {
+            width: 10px;
+            height: 10px;
+            transform: rotate(45deg);
+            border-top: 2px solid $color-yellow;
+            border-right: 2px solid $color-yellow;
+            right: 44px;
+            top: 97px;
+        }
+        &:hover {
+            &::after {
+                width: 110px;
+                right: 102px;
+            }
+            &::before {
+                right: 102px;
+            }
+        }
+    }
+    &__wrap {
+        &-container {
+            max-width: 1155px;
+            padding: 0 15px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between !important;
+            h3 {
+                letter-spacing: 5px;
+            }
+        }
+        &-left {
+            margin-top: -16rem;
+            h2,
+            h3 {
+                letter-spacing: 4.5px;
+            }
+            @media screen and (max-width: 1700px) {
+                margin-top: -16rem;
+            }
+            @media screen and (max-width:1650px) {
+                margin-top: -11.5rem;
+            }
+            @media screen and (max-width:1550px) {
+                margin-top: -7rem;
+            }
+            @media screen and (max-width:1366px) {
+                margin-top: -2rem;
+            }
+            @media screen and (max-width:1200px) {
+                margin-top: 0rem;
+            }
+            &.without-margin {
+                margin-top: 0 !important;
+            }
+        }
+        &-right{
+            position: relative;
+            height: auto;
+        }
+    }
+    &__img-frame{
+        position: absolute;
+        height: calc(58% + 20px);
+        width: 100%;
+        border: 2px solid #e4c8aa;
+        top: 60px;
+        bottom: 0;
+        right: -15px;
+        z-index: 0;
+    }
+    @media screen and (max-width:1600px) {
+        &__right {
+            &-inner {
+                &:last-of-type {
+                    right: -25%;
+                }
+            }
+        }
+    }
+    @media screen and (max-width:1200px) {
+        &__wrap {
+            &-container {
+                width: 100%;
+            }
+        }
+    }
+    @media screen and (max-width:620px) {
+        &__right {
+            &-imgs {
+                width: fit-content !important;
+                margin: 0 auto !important;
+            }
+            &-inner {
+                &:last-of-type {
+                    width: 300px;
+                    height: 300px;
+                    right: 0 !important;
+                    top: 0 !important;
+                    margin: -3em 0 0 4em !important;
+                }
+                img {
+                    width: 100% !important;
+                }
+                &:last-of-type {
+                    right: -25%;
+                    top: -50px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width:520px) {
+        &__right {
+            padding-top: 5px;
+        }
+        .header-himgc__left .nf-contact-content {
+            padding-top: 0 !important;
+            margin-top: -30px;
+        }
+        &__link {
+            &::after {
+                width: 100px;
+                height: 2px;
+                right: auto;
+                top: 102px;
+                left: 4em;
+            }
+            &::before {
+                right: auto;
+                top: 97px;
+                left: 5.8em;
+            }
+        }
+        &__links {
+            width: 90%;
+        }
+    }
+}
+
+// -- header v4 --//
+
+.header-himgc {
+    &__right{
+        &.header_v4{
+            .header-himgc__bg {
+                background-color: white;
+                background-size: 100%;
+            }
+        }
+    }
+    &__left{
+        &.header_v4{
+            .the-content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 100%;
+            }
+        }
+    }
+}

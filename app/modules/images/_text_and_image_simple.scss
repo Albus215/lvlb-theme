@@ -1,0 +1,39 @@
+.text-image {
+    &.container {
+        max-width: 1160px;
+        margin: 0 auto;
+        padding: 90px 15px;
+    }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    hr {
+        margin: 20px 0;
+    }
+    &__text {
+        flex-basis: 60%;
+        h3 {
+            letter-spacing: 5px;
+            border-bottom: 1px solid #6c7385;
+            padding-bottom: 15px;
+        }
+        p {
+            letter-spacing: 1px;
+        }
+    }
+    &__image {
+        flex-basis: 35%;
+        max-width: 350px;
+        padding: 0 10px;
+        width: 100%;
+    }
+    @media screen and (max-width:768px) {
+        flex-direction: column;
+        &__text {
+            margin-bottom: 35px;
+        }
+        &__image {
+            margin: 0 auto;
+        }
+    }
+}

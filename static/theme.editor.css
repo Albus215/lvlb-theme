@@ -1,0 +1,283 @@
+/**
+  Editor styles
+ */
+/**
+  Colors
+ */
+/* Breakpoints */
+/* Specific Media Queries - Apple Devices */
+/* Text Sizes */
+/**
+  Fonts & Typography
+ */
+.screen-reader-text {
+  display: none;
+}
+
+body {
+  font-family: Tajawal, sans-serif;
+}
+
+* {
+  word-wrap: break-word;
+  color: #131f3c;
+}
+
+[class*=dashicons]::before {
+  font-family: dashicons;
+}
+
+* b, * strong, * .font-bold {
+  font-family: Lora, serif;
+  font-weight: bold;
+  color: inherit;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  font-weight: normal;
+}
+
+h1, h2, h3, h4,
+.font-h1, .font-h2, .font-h3, .font-h4 {
+  line-height: 1.1;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+h5, h6,
+.font-h6, .font-h5 {
+  line-height: 1.4;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  font-weight: normal;
+}
+
+h1, .font-h1 {
+  font-family: Lora, serif;
+  font-weight: normal;
+  font-size: 85px;
+}
+
+h2, .font-h2 {
+  font-family: Lora, serif;
+  font-weight: normal;
+  font-size: 42px;
+}
+
+h3, .font-h3 {
+  font-family: Lora, serif;
+  font-weight: normal;
+  font-size: 36px;
+}
+
+h4, .font-h4 {
+  font-family: Lora, serif;
+  font-weight: normal;
+  font-size: 28px;
+}
+
+h5, .font-h5 {
+  font-family: Lora, serif;
+  font-weight: normal;
+  font-size: 23px;
+  letter-spacing: 5px;
+}
+
+h6, .font-h6 {
+  font-family: Tajawal, sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+}
+
+p {
+  font-family: Tajawal, sans-serif;
+  font-weight: normal;
+  line-height: 1.4;
+  font-size: 18px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  font-weight: 300;
+}
+
+@media (max-width: 899px) {
+  h1, .font-h1 {
+    font-size: 72px;
+  }
+}
+@media (max-width: 599px) {
+  h1, .font-h1 {
+    font-size: 60px;
+  }
+
+  h2, .font-h2 {
+    font-size: 40px;
+  }
+}
+.font-big {
+  font-size: 85px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.font-extrabold {
+  font-weight: 900;
+}
+
+blockquote {
+  display: block;
+  width: 100%;
+  padding: 30px 0 0 30px;
+  margin: 15px 0 15px 0;
+  background: transparent url("img/icon_quote.png") no-repeat left top;
+  font-size: 85px;
+  font-family: Lora, serif;
+  line-height: 1;
+}
+blockquote * {
+  font-family: Lora, serif;
+  font-size: 85px;
+  line-height: 1;
+}
+@media (max-width: 1199px) {
+  blockquote {
+    font-size: 60px;
+  }
+  blockquote * {
+    font-size: 60px;
+  }
+}
+@media (max-width: 899px) {
+  blockquote {
+    font-size: 38px;
+  }
+  blockquote * {
+    font-size: 38px;
+  }
+}
+
+.the-content img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+.the-content table {
+  width: 100% !important;
+  height: auto !important;
+  margin: 15px auto;
+  border: 1px solid #131f3c;
+  border-spacing: 0;
+  border-collapse: unset;
+}
+.the-content table tr:first-child td, .the-content table tr:first-child th {
+  background: #131f3c;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+.the-content table tr:first-child td *, .the-content table tr:first-child th * {
+  font-weight: bold;
+}
+.the-content table tr td, .the-content table tr th {
+  position: relative;
+  border: 1px solid #131f3c;
+  font-size: 18px;
+  padding: 10px;
+  margin: 0;
+}
+@media (max-width: 599px) {
+  .the-content table {
+    display: block;
+    position: relative;
+    overflow-x: auto;
+  }
+  .the-content table tbody {
+    display: block;
+    min-width: 600px;
+    height: 100%;
+  }
+}
+.the-content ul, .the-content ol {
+  margin-left: 0;
+  padding: 15px 0 15px 25px;
+}
+.the-content ul li, .the-content ol li {
+  font-size: 18px;
+  line-height: 1.8;
+  padding-bottom: 15px;
+}
+.the-content ul li {
+  display: block;
+  position: relative;
+}
+.the-content ul li::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -25px;
+  top: 0;
+  height: 30px;
+  width: 20px;
+  background-size: contain;
+}
+
+.txt-bold {
+  font-weight: bold;
+}
+.txt-semibold {
+  font-weight: 500;
+}
+.txt-regulat {
+  font-weight: normal;
+}
+.txt-center {
+  text-align: center;
+}
+.txt-right {
+  text-align: right;
+}
+.txt-white {
+  color: #fff;
+}
+.txt-white-all * {
+  color: #fff;
+}
+.txt-wide {
+  letter-spacing: 3px;
+}
+.txt-serif {
+  font-family: Lora, serif;
+}
+
+img.alignnone, img.alignleft, img.alignright, img.aligncenter {
+  display: block;
+  position: relative;
+  max-width: 100% !important;
+  height: auto;
+  width: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+img.alignleft {
+  float: left;
+}
+img.alignright {
+  float: right;
+}
+img.aligncenter {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height: 2px;
+  background-color: #dcdee0;
+  border: none;
+}
+
+.mce-content-body h1, .mce-content-body h2, .mce-content-body h3, .mce-content-body h4, .mce-content-body h5, .mce-content-body h6, .mce-content-body p {
+  margin: 0;
+}
